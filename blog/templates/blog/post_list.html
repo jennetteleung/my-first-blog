@@ -1,10 +1,21 @@
+
 <html>
 	<head>
 		<title>Jennette's Django Blog</title>
 	</head>
 	<body>
+	<div>
 		<h1>Test Blog</h1>
-		<h2><ul>Welcome</ul></h2>
-		<p>Hello, welcome to the test Django blog</p>
-	</body>
-</html>
+	</div>
+
+
+	{% for post in posts %}
+		<div>
+				<p>published {{ post.published_date }}</p>
+		<h1><a href=" ">{{ post.title }}</a></h1>
+		<p>{{ post.text|linebreaks }}</a></h1>
+		</div>
+	{% endfor %}
+	
+</body>
+	</html>
